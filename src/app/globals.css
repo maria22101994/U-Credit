@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+
+@font-face {
+  font-family: "digital-7";
+  src: url("fonts/DMSans-Regular.woff");
+}
+
+
+.DMSans {
+  font-family: "DMSans";
+}
+
+* {
+   font-family: "DMSans";
+}
+/* === Range Slider (U-Credit Style) === */
+input[type="range"].range-ucredit {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(
+      to right,
+      #ff0000 var(--range-progress, 50%),
+      #f3f7fa var(--range-progress, 50%)
+    );
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.25s ease-in-out;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* === Progress tick marks pattern (optional subtle texture) === */
+input[type="range"].range-ucredit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.7) 0,
+    rgba(255, 255, 255, 0.7) 1px,
+    transparent 8px,
+    transparent 12px
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* === Chrome / Edge Thumb === */
+input[type="range"].range-ucredit::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 7px solid #ff0000;
+  box-shadow: 0 3px 10px rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: -8px;
+}
+
+input[type="range"].range-ucredit::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.6);
+}
+
+/* === Firefox Thumb === */
+input[type="range"].range-ucredit::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 7px solid #ff0000;
+  box-shadow: 0 3px 10px rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="range"].range-ucredit::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.6);
+}
+
+/* === Firefox Track === */
+input[type="range"].range-ucredit::-moz-range-track {
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #ff0000 var(--range-progress, 50%),
+    #f3f7fa var(--range-progress, 50%)
+  );
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* === Disable outline glow === */
+input[type="range"].range-ucredit:focus {
+  outline: none;
+}
