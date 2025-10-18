@@ -1,20 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
-
+/* === Then define font-face === */
 @font-face {
   font-family: "digital-7";
   src: url("fonts/DMSans-Regular.woff");
 }
 
-
-.DMSans {
-  font-family: "DMSans";
+/* === Then your custom CSS === */
+.font-dm-sans {
+  font-family: "DM Sans", sans-serif;
 }
 
 * {
-   font-family: "DMSans";
+  font-family: "DM Sans", sans-serif;
 }
 /* === Range Slider (U-Credit Style) === */
 input[type="range"].range-ucredit {

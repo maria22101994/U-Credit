@@ -18,7 +18,7 @@ export default function NavBar() {
 
   return (
 <div className="w-full bg-white border-t border-gray-100 hidden sm:block shadow-sm sticky top-[40px] z-40">
-      <div className="w-full h-[60px] flex items-center justify-center">
+      <div className="w-full h-[40px] flex items-center justify-center">
         <nav className="w-full flex items-center justify-between text-[15px] font-medium">
           {LINKS.map((item, i) => (
             <div
