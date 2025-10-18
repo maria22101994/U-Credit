@@ -31,10 +31,11 @@ export default function LoanCalculator() {
     });
 
   return (
-    <section
-      id="loan-calculator"
-      className="relative flex items-center justify-center w-full bg-background py-[80px] px-4 sm:px-8 md:px-12 lg:px-20 z-10 -mt-[80px]"
-    >
+  <section
+  id="loan-calculator"
+  className="loan-section relative flex items-center justify-center w-full bg-background py-[80px] px-4 sm:px-8 md:px-12 lg:px-20 z-10"
+>
+
       {/* Outer Gradient Container */}
       <div className="flex flex-col items-center w-full max-w-[100%] mx-auto px-6 sm:px-[40px] lg:px-[80px] py-[64px] rounded-[32px] bg-gradient-to-r from-[#F2004F] to-[#F30000] shadow-[0_0_16px_4px_rgba(153,0,0,0.64)]">
         {/* Header Section */}
@@ -61,7 +62,8 @@ export default function LoanCalculator() {
     max-w-[1200px]
     mx-auto
     items-stretch
-    justify-center
+    justify-items-center
+    xl:justify-items-stretch
         "
         >
           {/* Left Card */}
@@ -189,18 +191,16 @@ export default function LoanCalculator() {
                   <button
                     key={rate}
                     onClick={() => setInterestRate(rate)}
-                    className={`flex justify-center items-center gap-[8px] !pt-0 !pb-0 rounded-[6px] py-[10px] sm:py-[12px] ${
-                      interestRate === rate
+                    className={`flex justify-center items-center gap-[8px] !pt-0 !pb-0 rounded-[6px] py-[10px] sm:py-[12px] ${interestRate === rate
                         ? "bg-[#FFF2F3]"
                         : "border border-[#C0BCC5] bg-white"
-                    }`}
+                      }`}
                   >
                     <span
-                      className={`font-dm-sans text-[26px] sm:text-[32px] font-bold ${
-                        interestRate === rate
+                      className={`font-dm-sans text-[26px] sm:text-[32px] font-bold ${interestRate === rate
                           ? "text-[#EC0000]"
                           : "text-[#776E81]"
-                      }`}
+                        }`}
                     >
                       {rate}
                     </span>

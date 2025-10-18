@@ -10,11 +10,10 @@ export default function TopHeader() {
   }, []);
   return (
     <>
-      <div className="w-full bg-[#d6001c] text-white text-[11px] sm:text-xs">
-        <div className="max-w-full mx-4 sm:mx-10 md:mx-20 px-4 py-1.5">
-          Moneylender Registered In The Republic Of Singapore License No. 149/2022
-        </div>
-      </div>
+     <div className="w-full bg-[#EC0000] text-white font-dm-sans text-[14px] font-medium not-italic leading-normal capitalize h-[50px] sm:text-xs px-[16px] sm:px-[80px] flex items-center">
+  Moneylender Registered In The Republic Of Singapore License No. 149/2022
+</div>
+
     </>
   );
 }

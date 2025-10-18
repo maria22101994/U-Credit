@@ -106,3 +106,270 @@ input[type="range"].range-ucredit::-moz-range-track {
 input[type="range"].range-ucredit:focus {
   outline: none;
 }
+/* default desktop overlap */
+.loan-section {
+  margin-top: -8vw;
+  transition: margin-top 0.3s ease;
+}
+@media (min-width: 1040px) {
+  .loan-section {
+    margin-top: -14vw;
+  }
+}
+@media (min-width: 2100px) {
+  .loan-section {
+    margin-top: -2vw;
+  }
+}
+@media (min-width: 1700px) {
+  .loan-section {
+    margin-top: -8vw;
+  }
+}
+@media (min-width: 1500px) {
+  .loan-section {
+    margin-top: -10vw;
+  }
+}
+@media (min-width: 1250px) {
+  .loan-section {
+    margin-top: -10.5vw;
+  }
+}
+/* tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .loan-section {
+    margin-top: -10vw;
+  }
+}
+@media (max-width: 1000px) {
+  .loan-section {
+    margin-top: -17vw;
+  }
+}
+/* small tablets / large phones (≤768px) */
+@media (max-width: 900px) {
+  .loan-section {
+    margin-top: -20vw;
+  }
+}
+@media (max-width: 800px) {
+  .loan-section {
+    margin-top: -22vw;
+  }
+}
+@media (max-width: 600px) {
+  .loan-section {
+    margin-top: -25vw;
+  }
+}
+/* small phones (≤480px) */
+@media (max-width: 480px) {
+  .loan-section {
+    margin-top: -28vw;
+  }
+}
+@media (max-width: 380px) {
+  .loan-section {
+    margin-top: -36vw;
+  }
+}
+ /* =======================
+     Global Swiper Dots
+  ======================= */
+  .swiper-pagination {
+    bottom: 8vw !important;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+    background: #fff;
+    opacity: 0.7;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e61e4d;
+  }
+
+  /* =======================
+     Default (base styles)
+  ======================= */
+  .hero-text {
+    width: 90% !important;
+  }
+  .hero-heading,
+  .hero-desc {
+    max-width: 90%;
+  }
+  .hero-btn {
+    width: 100%;
+  }
+
+  /* =======================
+     Ultra-wide screens (≥1500px)
+  ======================= */
+  @media (min-width: 1500px) {
+    .hero-text {
+      width: 40%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 40%;
+    }
+    .hero-btn {
+      width: 50%;
+    }
+    .swiper-pagination {
+      bottom: 6vw !important;
+    }
+  }
+
+  /* =======================
+     Desktops (1300px–1499px)
+  ======================= */
+  @media (max-width: 1499px) and (min-width: 1300px) {
+    .hero-text {
+      width: 50%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 50%;
+    }
+    .hero-btn {
+      width: 50%;
+    }
+    .swiper-pagination {
+      bottom: 7vw !important;
+    }
+  }
+
+  /* =======================
+     Large Laptops (1200px–1299px)
+  ======================= */
+  @media (max-width: 1299px) and (min-width: 1100px) {
+    .hero-text {
+      width: 60%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 60%;
+    }
+    .hero-btn {
+      width: 55%;
+    }
+    .swiper-pagination {
+      bottom: 9vw !important;
+    }
+  }
+
+  /* =======================
+     Tablets (1000px–1099px)
+  ======================= */
+  @media (max-width: 1099px) and (min-width: 900px) {
+    .hero-text {
+      width: 70%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 65%;
+    }
+    .hero-btn {
+      width: 60%;
+    }
+    .swiper-pagination {
+      bottom: 11vw !important;
+    }
+  }
+
+  /* =======================
+     Small Tablets (800px–899px)
+  ======================= */
+  @media (max-width: 899px) and (min-width: 700px) {
+    .hero-text {
+      width: 75%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 75%;
+    }
+    .hero-btn {
+      width: 70%;
+    }
+    .swiper-pagination {
+      bottom: 13vw !important;
+    }
+  }
+
+  /* =======================
+     Large Phones (600px–699px)
+  ======================= */
+  @media (max-width: 699px) and (min-width: 500px) {
+    .hero-text {
+      width: 85%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 85%;
+    }
+    .hero-btn {
+      width: 90%;
+    }
+    .swiper-pagination {
+      bottom: 13vw !important;
+    }
+  }
+
+  /* =======================
+     Small Phones (420px–499px)
+  ======================= */
+  @media (max-width: 499px) and (min-width: 420px) {
+    .hero-text {
+      width: 90%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 90%;
+    }
+    .hero-btn {
+      width: 100%;
+    }
+    .swiper-pagination {
+      bottom: 12vw !important;
+    }
+  }
+
+  /* =======================
+     Very Small Phones (320px–419px)
+  ======================= */
+  @media (max-width: 419px) {
+    .hero-text {
+      width: 95%;
+    }
+    .hero-heading,
+    .hero-desc {
+      max-width: 95%;
+    }
+    .hero-btn {
+      width: 100%;
+    }
+    .swiper-pagination {
+      bottom: 15vw !important;
+    }
+  }
+  /* Swiper pagination custom styles */
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  border: 1px solid white !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+  border: 2px solid white !important;
+}
+
+

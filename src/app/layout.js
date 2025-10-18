@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
         {/* Sticky container wraps both main headers */}
         <div className="sticky top-0 z-50">
           <HeaderBar />
-          <NavBar />
         </div>
 
         {/* Page content */}
