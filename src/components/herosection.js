@@ -10,38 +10,57 @@ const slides = [
   {
     image: "/bg.jpg",
     title: (
-      <>
-        <span className="text-[#FFDADD]">Singapore’s</span>{" "}
-        Most Trusted Licensed Money Lender
-      </>
+     <>
+  <span className="text-[#FFDADD]">Singapore’s <span className="!text-white">Most</span></span>
+  <br />
+  <span>Trusted Licensed</span>
+  <br />
+  <span>Money Lender</span>
+</>
+
     ),
-    desc: "U-Credit is a licensed money lender in Singapore, providing legal and transparent loans with no hidden fees.",
+    descMobile:
+      "U-Credit is a <b>licensed money lender in</br> Singapore,</b> providing legal and transparent</br> loans with <b>no hidden fees.</b>",
+    descDesktop:
+      "U-Credit is a <b>licensed money lender in Singapore,</b> providing legal</br> and transparent loans with <b>no hidden fees.</b>",
   },
   {
     image: "/bg.jpg",
     title: (
       <>
-        <span className="text-[#FFDADD]">Fast, Safe &</span>{" "}
-        Transparent Loan Solutions
+        It’s Easy To <br />
+        <span className="text-[#FFDADD]">Find Us</span>
       </>
     ),
-    desc: "We make borrowing simple, secure, and stress-free — approved in minutes with clear terms.",
+    descMobile:
+      "Located at <b>The Bencoolen</b>, U-Credit is one of<br> the most convenient licensed moneylenders<br> in central Singapore, just minutes from <b>Bugis<br> MRT (EW12/DT14)</b>, <b>Bencoolen MRT (DT21)</b>, and<br> <b>Bras Basah MRT (CC2)</b>.",
+    descDesktop:
+      "Located at <b>The Bencoolen</b>, U-Credit is one of the most convenient licensed</br> moneylenders in central Singapore, just minutes from <b>Bugis MRT (EW12/DT14)</b>,</br> <b>Bencoolen MRT (DT21)</b>, and <b>Bras Basah MRT (CC2)</b>.",
   },
   {
     image: "/bg.jpg",
     title: (
-      <>
-        <span className="text-[#FFDADD]">Your Trusted</span>{" "}
-        Financial Partner in Singapore
-      </>
+  <>
+  <span>Enjoy Expert advice</span>
+  <br />
+  <span>
+    & <span className="text-[#FFDADD]">Affordable Rates</span>
+  </span>
+</>
+
+
     ),
-    desc: "Experience peace of mind with our reliable lending services and customer-first approach.",
+    descMobile:
+      "With <b>years of experience</b> in the</br> <b>moneylending sector</b>, we know best how to</br> <b>help our clients.</b>",
+    descDesktop:
+      "With <b>years of experience</b> in the <b>moneylending sector</b>, we know best</br> how to <b>help our clients.</b>",
   },
 ];
 
+
 const HeroSection = () => {
   return (
-    <div className="relative w-full overflow-hidden min-h-[80vh] sm:min-h-[796px]">
+    <div className="relative w-full overflow-hidden min-h-[102vh] sm:min-h-[796px]">
       {/* SVG ClipPath for Curved Bottom */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none">
         <defs>
@@ -68,7 +87,7 @@ const HeroSection = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative h-[80vh] sm:h-[796px] flex items-center justify-start overflow-hidden">
+              <div className="relative h-[102vh] sm:h-[796px] flex items-start justify-start overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                   <Image
@@ -85,68 +104,90 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1D1525]/95 to-transparent z-[1]" />
 
                 {/* Text Content */}
-                <div className="relative z-[2] hero-text flex flex-col justify-center gap-4 sm:gap-6 text-center sm:text-left px-6 sm:px-12 lg:px-20">
+                <div className="relative z-[2] flex flex-col gap-4 sm:gap-6 sm:text-left w-full pl-6 sm:pl-20 pt-[154px] sm:pt-[115px]">
                   <h1 className="text-white font-dm-sans text-[26px] sm:text-[44px] md:text-[56px] font-extrabold leading-tight hero-heading">
                     {slide.title}
                   </h1>
-                  <p className="text-white font-dm-sans text-[15px] sm:text-[18px] md:text-[20px] leading-relaxed opacity-90 hero-desc">
-                    {slide.desc}
-                  </p>
+              <p
+  className="block md:hidden text-white font-dm-sans text-[16px] leading-relaxed opacity-90"
+  dangerouslySetInnerHTML={{ __html: slide.descMobile }}
+/>
 
-                  <div className="flex justify-center sm:justify-start">
-                    <button
-                      onClick={() => {
-                        const section = document.getElementById("loan-calculator");
-                        if (section)
-                          section.scrollIntoView({ behavior: "smooth" });
-                      }}
-                      className="w-[40vh] cursor-pointer flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-4 rounded-lg border border-[#F2004F] bg-white hover:bg-[#FDE7ED] transition-all"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="11"
-                        height="16"
-                        viewBox="0 0 11 16"
-                        fill="none"
-                      >
-                        <path
-                          d="M2 1.5L8 8L2 14.5"
-                          stroke="url(#paint0_linear_27_266)"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_27_266"
-                            x1="2.5"
-                            y1="14.5"
-                            x2="2.9"
-                            y2="1.4"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stopColor="#F2004F" />
-                            <stop offset="1" stopColor="#F30000" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
+{/* Desktop Description */}
+<p
+  className="hidden md:block text-white font-dm-sans text-[20px] leading-relaxed opacity-90"
+  dangerouslySetInnerHTML={{ __html: slide.descDesktop }}
+/>
 
-                      <span className="font-dm-sans text-[16px] sm:text-[18px] font-medium bg-gradient-to-r from-[#F2004F] to-[#F30000] bg-clip-text text-transparent">
-                        Apply Loan Securely
-                      </span>
-                    </button>
+
+                  {/* ✅ Button Restored */}
+                  <div className="flex sm:justify-start mt-4 sm:mt-6">
+                  <button
+  onClick={() => {
+    const section = document.getElementById("loan-calculator");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="
+    w-auto cursor-pointer flex items-center justify-center gap-2
+    py-3 px-5              /* Small screens: 12px 20px */
+    sm:py-4 sm:pr-6 sm:pl-7 /* Large screens: 16px 24px 16px 28px */
+    rounded-lg border border-[#F2004F]
+    bg-white hover:bg-[#FDE7ED] transition-all duration-300
+  "
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="11"
+    height="16"
+    viewBox="0 0 11 16"
+    fill="none"
+  >
+    <path
+      d="M2 1.5L8 8L2 14.5"
+      stroke="url(#paint0_linear_27_266)"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_27_266"
+        x1="2.5"
+        y1="14.5"
+        x2="2.9"
+        y2="1.4"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#F2004F" />
+        <stop offset="1" stopColor="#F30000" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+ <span
+  className="
+    font-dm-sans font-medium
+    text-[16px] sm:text-[20px]    /* 16px → 20px */
+    leading-6 sm:leading-7        /* 24px → 28px */
+    bg-gradient-to-r from-[#F2004F] to-[#F30000]
+    bg-clip-text text-transparent
+  "
+>
+  Apply Loan Securely
+</span>
+
+</button>
+
                   </div>
                 </div>
 
-                {/* Sticker (Hidden on small screens) */}
-                <div className="hidden md:block absolute right-[5%] top-1/2 -translate-y-1/2 z-[2]">
-                  <Image
+                {/* Sticker (Fixed on screen) */}
+                {/* <div className="hidden md:block fixed right-[5%] top-1/2 -translate-y-1/2 z-[50]">
+                  <img
                     src="/sticker.png"
                     alt="Apply with Singpass"
-                    width={120}
-                    height={120}
-                    className="drop-shadow-xl"
+                    className="drop-shadow-xl w-25 h-35.5"
                   />
-                </div>
+                </div> */}
               </div>
             </SwiperSlide>
           ))}

@@ -1,7 +1,7 @@
 import "./globals.css";
 import HeaderBar from "@/components/header";
-import NavBar from "@/components/navbar";
 import TopHeader from "@/components/topheader";
+import FloatingSticker from "@/components/FloatingSticker"; // ✅ Add this
 
 export const metadata = {
   title: "U-Credit",
@@ -11,17 +11,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased bg-[#f7f7f7] dark:bg-gray-900 overflow-x-hidden">
+      <body className="antialiased overflow-x-hidden">
         {/* Top header always visible */}
         <TopHeader />
 
-        {/* Sticky container wraps both main headers */}
+        {/* Sticky header bar */}
         <div className="sticky top-0 z-50">
           <HeaderBar />
         </div>
 
-        {/* Page content */}
+        {/* Main page content */}
         <main>{children}</main>
+
+        {/* ✅ Floating Sticker CTA (Client Component) */}
+        <FloatingSticker />
       </body>
     </html>
   );

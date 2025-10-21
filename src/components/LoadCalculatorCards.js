@@ -40,13 +40,13 @@ export default function LoanCalculator() {
       <div className="flex flex-col items-center w-full max-w-[100%] mx-auto px-6 sm:px-[40px] lg:px-[80px] py-[64px] rounded-[32px] bg-gradient-to-r from-[#F2004F] to-[#F30000] shadow-[0_0_16px_4px_rgba(153,0,0,0.64)]">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center gap-[8px] mb-[64px] px-2">
-          <h2 className="text-white font-dm-sans text-[28px] sm:text-[34px] md:text-[38px] font-semibold leading-[120%] tracking-[-0.38px]">
+          <h2 className="text-white font-dm-sans text-[24px] sm:text-[38px] font-semibold leading-[120%] tracking-[-0.38px]">
             Estimate Loan Easily with
           </h2>
-          <h1 className="text-white font-dm-sans text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-[120%] tracking-[-0.48px]">
+          <h1 className="text-white font-dm-sans text-[32px] sm:text-[48px] md:text-[48px] font-bold leading-[120%] tracking-[-0.48px]">
             U-Credit Loan Calculator
           </h1>
-          <p className="text-white font-dm-sans text-[16px] sm:text-[18px] md:text-[20px] leading-[30px] sm:leading-[34px] tracking-[-0.1px] max-w-[800px]">
+          <p className="text-white font-dm-sans text-[14px] sm:text-[20px] md:text-[20px] leading-[30px] sm:leading-[34px] tracking-[-0.1px] max-w-[800px]">
             Adjust the numbers, explore repayment options and find a plan that fits your needs.
           </p>
         </div>
@@ -71,12 +71,12 @@ export default function LoanCalculator() {
             {/* Loan Amount */}
             <div className="flex flex-col gap-[20px]">
               <div className="flex justify-between items-center">
-                <span className="text-[#EC0000] text-[18px] sm:text-[20px] font-dm-sans">
+                <span className="text-[#EC0000] text-[14px] sm:text-[20px] font-dm-sans">
                   Loan Amount (SGD)
                 </span>
                 <div className="bg-[#FFF2F3] px-2 py-1 rounded-md">
-                  <span className="text-[#776E81] text-[14px] sm:text-[16px]">SGD </span>
-                  <span className="text-[#EC0000] text-[26px] sm:text-[32px] font-bold">
+                  <span className="text-[#776E81] text-[12px] sm:text-[16px]">SGD </span>
+                  <span className="text-[#EC0000] text-[20px] sm:text-[32px] font-bold">
                     {loanAmount.toLocaleString()}
                   </span>
                 </div>
@@ -119,7 +119,7 @@ export default function LoanCalculator() {
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-[10]"
                 />
               </div>
-              <div className="flex justify-between text-[#342643] opacity-60 text-sm sm:text-base">
+              <div className="flex justify-between text-[#342643] opacity-60 text-[14px] sm:text-[16px]">
                 <span>SGD {MIN_AMOUNT.toLocaleString()}</span>
                 <span>SGD {MAX_AMOUNT.toLocaleString()}</span>
               </div>
@@ -128,11 +128,11 @@ export default function LoanCalculator() {
             {/* Loan Tenure */}
             <div className="flex flex-col gap-[20px]">
               <div className="flex justify-between items-center">
-                <span className="text-[#EC0000] text-[18px] sm:text-[20px] font-dm-sans">
+                <span className="text-[#EC0000] text-[14px] sm:text-[20px] font-dm-sans">
                   Loan Tenure (Months)
                 </span>
                 <div className="bg-[#FFF2F3] px-2 py-1 rounded-md">
-                  <span className="text-[#EC0000] text-[26px] sm:text-[32px] font-bold">
+                  <span className="text-[#EC0000] text-[20px] sm:text-[32px] font-bold">
                     {loanTenure}
                   </span>
                   <span className="text-[#776E81] text-[14px] sm:text-[16px]"> Months</span>
@@ -175,7 +175,7 @@ export default function LoanCalculator() {
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-[10]"
                 />
               </div>
-              <div className="flex justify-between text-[#342643] opacity-60 text-sm sm:text-base">
+              <div className="flex justify-between text-[#342643] opacity-60 text-[14px] sm:text-[16px]">
                 <span>{MIN_TENURE} Month</span>
                 <span>{MAX_TENURE} Months</span>
               </div>
@@ -183,15 +183,15 @@ export default function LoanCalculator() {
 
             {/* Interest Rate */}
             <div className="flex flex-col gap-[20px]">
-              <h3 className="text-[#EC0000] text-[18px] sm:text-[20px] font-dm-sans">
+              <h3 className="text-[#EC0000] text-[14px] sm:text-[20px] sm:text-[20px] font-dm-sans">
                 Monthly Interest Rate (%)
               </h3>
-              <div className="grid grid-cols-4 gap-[16px]">
+              <div className="grid grid-cols-4 gap-2">
                 {[1, 2, 3, 4].map((rate) => (
                   <button
                     key={rate}
                     onClick={() => setInterestRate(rate)}
-                    className={`flex justify-center items-center gap-[8px] !pt-0 !pb-0 rounded-[6px] py-[10px] sm:py-[12px] ${interestRate === rate
+                    className={`flex justify-center items-center gap-[8px] !pt-0 !pb-0 rounded-[6px] py-[10px] sm:px-7 sm:h-14 ${interestRate === rate
                         ? "bg-[#FFF2F3]"
                         : "border border-[#C0BCC5] bg-white"
                       }`}
@@ -223,38 +223,44 @@ export default function LoanCalculator() {
 
             <div className="relative z-10 flex flex-col gap-[32px]">
               <div className="flex flex-col justify-center items-center gap-[10px] px-[24px] sm:px-[40px] py-[20px] sm:py-[24px] rounded-[12px] bg-white/70 backdrop-blur-sm bg-[url('/mesh.png')] bg-no-repeat bg-cover shadow-[0_4px_10px_0_rgba(253,229,229,0.8)]">
-                <p className="text-[#342643] text-center font-dm-sans text-[18px] sm:text-[20px] font-medium leading-[30px] sm:leading-[34px]">
+                <p className="text-[#342643] text-center font-dm-sans text-[14px] sm:text-[20px] font-medium leading-[30px] sm:leading-[34px]">
                   Your Total Repayment
                 </p>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-[#776E81] text-[20px] sm:text-[24px]">
+                  <span className="text-[#776E81] text-[14px] sm:text-[24px]">
                     SGD{" "}
                   </span>
-                  <span className="text-[#EC0000] text-[40px] sm:text-[48px] font-bold leading-[50px] sm:leading-[58px] whitespace-nowrap">
+                  <span className="text-[#EC0000] text-[20px] sm:text-[48px] font-bold leading-[50px] sm:leading-[58px] whitespace-nowrap">
                     {formatCurrency(totalRepayment)}
                   </span>
                 </div>
               </div>
 
               <div className="flex justify-between items-center">
-                <span className="text-[#EC0000] text-[18px] sm:text-[20px] font-dm-sans">
+                <span className="text-[#EC0000] text-[14px] sm:text-[20px] font-dm-sans">
                   Monthly Installment
                 </span>
                 <div>
                   <span className="text-[#776E81] text-[14px] sm:text-[16px]">SGD </span>
-                  <span className="text-[#EC0000] text-[20px] sm:text-[24px] font-semibold">
+                  <span className="text-[#EC0000] text-[16px] sm:text-[24px] font-semibold">
                     {formatCurrency(monthlyPayment)}
                   </span>
                 </div>
               </div>
+ <div className="flex justify-center bg-white">
+          <div
+            className="w-full mx-auto border-t-[3px]"
+            style={{ borderColor: "rgba(217, 225, 231, 0.3)" }}
+          ></div>
+        </div>
 
               <div className="flex justify-between items-center">
-                <span className="text-[#EC0000] text-[18px] sm:text-[20px] font-dm-sans">
+                <span className="text-[#EC0000] text-[14px] sm:text-[20px] sm:text-[20px] font-dm-sans">
                   Total Interest
                 </span>
                 <div>
                   <span className="text-[#776E81] text-[14px] sm:text-[16px]">SGD </span>
-                  <span className="text-[#EC0000] text-[20px] sm:text-[24px] font-semibold">
+                  <span className="text-[#EC0000] text-[16px] sm:text-[24px] font-semibold">
                     {formatCurrency(totalInterest)}
                   </span>
                 </div>
@@ -276,7 +282,7 @@ export default function LoanCalculator() {
                       strokeLinecap="round"
                     />
                   </svg>
-                  <span>Apply Loan Now</span>
+                  <span className="text-[16px]">Apply Loan Now</span>
                 </button>
               </div>
             </div>
